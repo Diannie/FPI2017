@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <script>
+    function validarNumeros(event){
+      if(event.charCode >= 48 && event.charCode <= 57 || event.charCode = 8){
+        return true;
+       }
+       return false;
+    }
+    function suma(){
+    alert("funciona");
+    }
+    function resta(){
+    alert("funciona");
+    }
+    function multiplicacion(){
+    alert("funciona");
+    }
+    function division(){
+    alert("funciona");
+    }
+    </script>
+    <p>Ingresar números:    <input type=text name=dato onkeypress="return validarNumeros(event)"/> <input type=text name=dato2 onkeypress="return validarNumeros(event)">
+    <br>
+    <br>
+    <input type=button value=Suma onclick="return suma();">
+    <input type=button value=Resta onclick="return resta();">
+    <input type=button value=Multiplicación onclick="return multiplicacion();">
+    <input type=button value=División onclick="return division();">
+    <p>Resultado:    <input type=text name=resultado>
+  </body>
+</html>
