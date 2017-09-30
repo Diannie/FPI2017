@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Girar Dados</title>
+  </head>
+  <body>
+
+    <img src="" name="dado1">
+    <img src="" name="dado2">
+    <br/>
+    <input type="button" value="Tirar" onclick="acciones()"/>
+    <br/>
+    <label>Resultado:</label>
+    <input type="number" id="resultado" disabled/>
+
+    <script>
+    var cara0=new Image();
+      cara0.src="1.png"
+    var cara1=new Image();
+      cara1.src="2.png"
+    var cara2=new Image();
+      cara2.src="3.png"
+    var cara3=new Image();
+      cara3.src="4.png"
+    var cara4=new Image();
+      cara4.src="5.png"
+    var cara5=new Image();
+      cara5.src="6.png"
+
+      var numero1=0;
+      var numero2=0;
+
+    function random(){
+      numero1=Math.round(Math.random()*5);
+      numero2=Math.round(Math.random()*5);
+    }
+
+    function lanzador() {
+      random ();
+      document.images["dado1"].src=eval("cara"+numero1+".src");
+      document.images["dado2"].src=eval("cara"+numero2+".src");
+    }
+    function suma(){
+      var resultado = parseInt(numero1+numero2+2);
+      document.getElementById("resultado").value = resultado;
+    }
+    function acciones(){
+      lanzador();
+      suma();
+    }
+
+    </script>
+  </body>
+</html>
